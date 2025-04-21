@@ -10,7 +10,7 @@ app.use(express.json())
 
 app.use(require('morgan')('dev'))
 
-app.get(`/api`, (req, res, next) => {
+app.get(`/`, (req, res, next) => {
   res.send(`Welcome to the Duo-Doodle API`);
 })
 

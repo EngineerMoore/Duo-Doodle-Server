@@ -26,7 +26,7 @@ if (!token) return next();
   };
 });
 
-router.post("/signUp", async (req, res, next) => {
+router.post("/api/signUp", async (req, res, next) => {
   const { username, email, firstName, lastName, password } = req.body;
   
   try{
@@ -40,7 +40,7 @@ router.post("/signUp", async (req, res, next) => {
 });
 
 
-router.post("/login", async (req, res, next) => {
+router.post("/api/login", async (req, res, next) => {
   const { email, password } = req.body;
   
   try {
