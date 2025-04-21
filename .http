@@ -1,0 +1,28 @@
+@PORT = 4000
+@host = http://localhost:{{PORT}}
+
+###
+GET {{host}}/
+
+###
+POST {{host}}/signUp
+Content-Type: application/json
+
+{
+  "username": "newuser3",
+  "email": "email@gmail.com",
+  "firstName": "Fred",
+  "lastName": "Jones", 
+  "password": "password3"
+}
+
+
+### at login allows me to make the reference where token is declared
+# @name login
+POST {{host}}/login
+Content-Type: application/json
+
+{
+  "email": "email@gmail.com",
+  "password": "password3"
+}
