@@ -26,3 +26,15 @@ Content-Type: application/json
   "email": "email@gmail.com",
   "password": "password3"
 }
+
+###
+POST {{host}}/api/signUp
+Content-Type: application/json
+
+{
+  "username": "newuser4",
+  "email": "email2@gmail.com",
+  "firstName": "Ted",
+  "lastName": "Jones", 
+  "password": "password4"
+}

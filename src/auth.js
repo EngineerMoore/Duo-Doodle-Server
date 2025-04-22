@@ -1,4 +1,4 @@
-const prisma = require ("../prisma");
+const prisma = require ("../prisma/index.js");
 
 const express = require(`express`);
 const router = express.Router();
