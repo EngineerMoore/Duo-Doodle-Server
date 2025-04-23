@@ -1,12 +1,8 @@
 const bcrypt = require("bcrypt");
-const { PrismaPg } = require("@prisma/adapter-pg")
 const { PrismaClient } = require("../generated/prisma/client");
 const { withAccelerate } = require('@prisma/extension-accelerate');
 
-const connectionString = `${process.env.DATABASE_URL}`;
-
-const adapter = new PrismaPg({ connectionString });
-const prisma = new PrismaClient({ adapter }).$extends(withAccelerate()).$extends({
+const prisma = new PrismaClient().$extends(withAccelerate()).$extends({
   model: {
     user: {
       async signUp(username, email, firstName, lastName, password) {
