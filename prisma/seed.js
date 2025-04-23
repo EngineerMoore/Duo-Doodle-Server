@@ -1,5 +1,5 @@
 // must include the.js b/c of ESM file extension
-const prisma = require('./index.js')
+const prisma = require('../src/index.js')
 const { faker } = require('@faker-js/faker');
 
 // don't forget to add prisma seed script to package.json

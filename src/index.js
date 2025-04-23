@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const { PrismaClient } = require("../generated/prisma/client");
+const { PrismaClient } = require("./generated/client");
 const { withAccelerate } = require('@prisma/extension-accelerate');
 
 const prisma = new PrismaClient().$extends(withAccelerate()).$extends({
