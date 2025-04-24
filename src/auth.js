@@ -8,7 +8,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 // jwt.sign creates a token w/ id = payload and JWT_SECRET = key
 const createToken = (id) => {
-  return jwt.sign({ id }, JWT_SECRET, {expiresIn: "1d"});
+  return jwt.sign({ id }, `${JWT_SECRET}`, {expiresIn: "1d"});
 };
 
 router.use( async(req, res, next) => {
