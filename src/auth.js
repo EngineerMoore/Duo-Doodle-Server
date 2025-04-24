@@ -11,7 +11,7 @@ const createToken = (id) => {
   return jwt.sign({ id }, JWT_SECRET, {expiresIn: "1d"});
 };
 
-router.use( async(req, next) => {
+router.use( async(req, res, next) => {
   const authHeader = req.headers.authorization;
   const token = authHeader?.slice(7);//"Bearer <token>"
 if (!token) return next();
@@ -53,7 +53,7 @@ router.post("/api/login", async (req, res, next) => {
   
 });
 
-const authenticate = (req, next) => {
+const authenticate = (req, res, next) => {
   if (req.user) {
     next ();
   } else {
